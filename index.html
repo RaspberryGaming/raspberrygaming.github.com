@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="./2dgeometry.js"></script>
+    <script src="./gameengine.js"></script>
+    <script src="./interpreter.js"></script>
+    <style>
+      body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana;
+      }
+      canvas {
+            border: 1px solid #9C9898;
+      }
+      a:link {text-decoration: none} 
+      a:visited {text-decoration: none} 
+      a:active {text-decoration: none} 
+
+    </style>
+</head>
+<body id="container">
+    <div id="canvasdiv"> 
+        <canvas id="canvas" style="position:absolute;top:0px;left:0px;border-color:white;z-index:0"></canvas>
+        <canvas id="canvas1" style="position:absolute;top:0px;left:0px;border-color:white;z-index:0"></canvas>
+    </div>
+    <div id="functions-window" style="z-index:1; position:absolute; left:85%; top: 5%">
+        <b>Functions</b>
+        <br/>
+        <br/>
+        <div id="functions-list">
+            <table>
+                <tr><td style="width: 100px"><b>Name</b></td><td><b>Parameters</b></td></tr>
+                <tr><td>move</td><td>left, right, up, down</td></tr>
+            </table>
+        </div>
+    </div>
+    <div id="console" style="z-index:1; position:absolute; top: 78%; left: 3.4%">
+        Console
+        <form id="console-area">
+            <textarea id="console-box" cols="200" rows="8"></textarea>
+            <a href="#"><div id="console-run" style="background:#629632; height:40px; width: 100px; color:white;text-align: center; vertical-align: middle; line-height: 40px;">
+                RUN
+               </div>
+            </a>
+        </form>
+    </div>
+</body>
+</html>
