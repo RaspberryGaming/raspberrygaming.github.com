@@ -52,7 +52,7 @@ function drawPlayer(ofx, ofy, onCollision) {
 
         var tempPlayerRect = new Rect(locx, locy, 80, 92);
         for (var i = 0; i < rects.length; i++) {
-            if (rectscollide(tempPlayerRect, rects[i])) {
+            if (rectscollide(tempPlayerRect, rects[i]) || rectscollide(rects[i], tempPlayerRect) ) {
                 onCollision();
                 return;
             }
@@ -88,13 +88,20 @@ function drawRaspberry(vis) {
 }
 
 var rects = [];
-
+var bar_width = 28;
 function drawMap(level) {
     ctx.clearRect(0, 0, 500, 500);
     ctx1.clearRect(0, 0, 500, 500);
 
-    rects.push(new Rect(50, 200, 300, 28));
-    rects.push(new Rect(350, 200, 28, 100));
+    rects.push(new Rect(50, 200, 300, bar_width));
+    rects.push(new Rect(350, 200, bar_width, 100));
+
+    rects.push(new Rect(650, 300, 300, bar_width));
+    rects.push(new Rect(350, 430, bar_width, 100));
+
+    rects.push(new Rect(250, 200, 300, bar_width));
+    rects.push(new Rect(550, 200, bar_width, 100));
+
 
     ctx.fillStyle = "#629632";
     for (var i = 0; i < rects.length; i++) {
@@ -119,23 +126,24 @@ function onLeft(clear) {
     drawPlayer(-20, 0, onRight);
 }
 
-
-document.onkeyup = function (e) {
-    //console.log(e.keyCode);
-    switch (e.keyCode) {
-        case 32: onSpace();
-            break;
-        case 37: onLeft();//drawskier(ctx, spriterects[0].rect, new Point(10,10));
-            break;
-        case 38: onUp();
-            break;
-        case 39: onRight();//drawskier(ctx, spriterects[1].rect, new Point(10,10));
-            break;
-        case 40: onDown();
-            break;
-        case 70: onFButton();
-            break;
-        case 80: onPButton();
-            break;
+function admin(){
+    document.onkeyup = function (e) {
+        //console.log(e.keyCode);
+        switch (e.keyCode) {
+            case 32: onSpace();
+                break;
+            case 37: onLeft();//drawskier(ctx, spriterects[0].rect, new Point(10,10));
+                break;
+            case 38: onUp();
+                break;
+            case 39: onRight();//drawskier(ctx, spriterects[1].rect, new Point(10,10));
+                break;
+            case 40: onDown();
+                break;
+            case 70: onFButton();
+                break;
+            case 80: onPButton();
+                break;
+        }
     }
-}
+};
