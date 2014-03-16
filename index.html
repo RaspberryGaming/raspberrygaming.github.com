@@ -8,27 +8,57 @@
     <script src="./2dgeometry.js"></script>
     <script src="./gameengine.js"></script>
     <script src="./interpreter.js"></script>
+
     <style>
       body {
             margin: 0px;
             padding: 0px;
             font-family: Verdana;
       }
+      #banner {
+            position: absolute;
+            font-size:40pt;
+            font-family: Verdana ;
+            z-index: 10;
+            font-weight: bold;
+            color: #CC0000;
+            right: 5%;
+            -webkit-font-smoothing: antialiased;
+      }
       canvas {
             border: 1px solid #9C9898;
       }
+
       a:link {text-decoration: none} 
       a:visited {text-decoration: none} 
       a:active {text-decoration: none} 
 
+      #console {
+            z-index:1; 
+            position:absolute; 
+            top: 78%; 
+            left: 3.4% 
+      }
+
+      #functions-window{
+            z-index:1; 
+            position:absolute; 
+            left:80%; 
+            top: 10%;
+            font-family: verdana;
+            border: 2px solid;
+            padding: 10px;
+      }
+
     </style>
 </head>
+
 <body id="container">
     <div id="canvasdiv"> 
         <canvas id="canvas" style="position:absolute;top:0px;left:0px;border-color:white;z-index:0"></canvas>
         <canvas id="canvas1" style="position:absolute;top:0px;left:0px;border-color:white;z-index:0"></canvas>
     </div>
-    <div id="functions-window" style="z-index:1; position:absolute; left:85%; top: 5%">
+    <div id="functions-window" style="z-index:1; position:absolute; left:80%; top: 10%">
         <b>Functions</b>
         <br/>
         <br/>
@@ -45,9 +75,14 @@
             <textarea id="console-box" cols="200" rows="8"></textarea>
             <a href="#"><div id="console-run" style="background:#629632; height:40px; width: 100px; color:white;text-align: center; vertical-align: middle; line-height: 40px;">
                 RUN
+
                </div>
             </a>
         </form>
     </div>
+    <div id="banner"> 
+        Raspberry Trails
+
+    <div/>
 </body>
 </html>
