@@ -93,14 +93,14 @@ function drawMap(level) {
     ctx.clearRect(0, 0, 500, 500);
     ctx1.clearRect(0, 0, 500, 500);
 
-    rects.push(new Rect(50, 200, 300, bar_width));
+    rects.push(new Rect(0, 200, 300, bar_width));
     rects.push(new Rect(350, 200, bar_width, 100));
 
-    rects.push(new Rect(650, 300, 300, bar_width));
-    rects.push(new Rect(350, 430, bar_width, 100));
+    rects.push(new Rect(750, 300, 300, bar_width));
+    rects.push(new Rect(350, 430, bar_width, 300));
 
     rects.push(new Rect(250, 200, 300, bar_width));
-    rects.push(new Rect(550, 200, bar_width, 100));
+    rects.push(new Rect(550, 200, bar_width, 300));
 
 
     ctx.fillStyle = "#629632";
