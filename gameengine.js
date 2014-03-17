@@ -75,10 +75,10 @@ function drawPlayer(ofx, ofy, onCollision) {
 
 function drawRaspberry(vis) {
     var img = new Image;
-    img.src = "./raspberry.jpg";
+    img.src = "./raspberrypi.jpg";
     if (vis == true) {
         img.onload = function () {
-            ctx.drawImage(img, 200, 400);
+            ctx.drawImage(img, 200, 400, 100, 70);
             raspberryRect = new Rect(200, 400, 50, 50);
             //ctx.fillRect(200, 400, 50, 50);
         }
