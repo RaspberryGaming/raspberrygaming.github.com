@@ -20,6 +20,9 @@ var run = function (functions) {
             case "move":
                 moveFunctions(functions[i].parameters);
                 break;
+            case "admin":
+                admin();
+                break;
             default:
                 console.log("run() failed");
                 return;

@@ -12,53 +12,73 @@
 
 
     <style>
-      body {
-            margin: 0px;
-            padding: 0px;
-            font-family: Verdana;
-      }
-      #banner {
-            position: absolute;
-            font-size:40pt;
-            font-family: Verdana ;
-            z-index: 10;
-            font-weight: bold;
-            color: #CC0000;
-            right: 5%;
-            top: 2%;
-            -webkit-font-smoothing: antialiased;
-      }
-      canvas {
-            border: 1px solid #9C9898;
-      }
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Verdana;
+    }
+    #banner {
+        position: absolute;
+        font-size:40pt;
+        font-family: Verdana ;
+        z-index: 10;
+        font-weight: bold;
+        color: #CC0000;
+        right: 5%;
+        top: 2%;
+        -webkit-font-smoothing: antialiased;
+    }
+    canvas {
+        border: 1px solid #9C9898;
+    }
 
-      a:link {text-decoration: none} 
-      a:visited {text-decoration: none} 
-      a:active {text-decoration: none} 
+    a:link {text-decoration: none} 
+    a:visited {text-decoration: none} 
+    a:active {text-decoration: none} 
 
-      #console {
-            z-index:1; 
-            position:absolute; 
-            top: 78%; 
-            left: 3.4% 
-      }
+    #console {
+        z-index:1; 
+        position:absolute; 
+        top: 76%; 
+        left: 3.4%;
 
-      #functions-window{
-            z-index:1; 
-            position:absolute; 
-            top: 14%;
-            left: 75%;
-            width: 350px;
-            font-family: verdana;
-            border: 2px solid;
-            padding: 10px;
-            color: green;
-            border-color: green;
-      }
-      #functions-window:hover{
-            background-color: rgba(155,252,158,0.5);
+    }
 
-      }
+    #console-box {
+        font-family: verdana;
+        font-size: 12pt;
+
+    }
+
+    #functions-window{
+        z-index:1; 
+        position:absolute; 
+        top: 14%;
+        left: 75%;
+        width: 350px;
+        font-family: verdana;
+        border: 2px solid;
+        padding: 10px;
+        color: green;
+        border-color: green;
+    }
+    #functions-window:hover{
+        background-color: rgba(155,252,158,0.5);
+
+    }
+
+    #download{
+        position: absolute;
+        top: 40%;
+        left: 75%;
+        border:0px;
+        border-radius:15px;
+        box-shadow: 10px 10px 5px #888888;
+        color: white;
+        padding: 10px;
+        background-color: black;
+
+    }
 
     </style>
 </head>
@@ -76,26 +96,35 @@
             <table>
                 <tr><td style="width: 100px"><b>Name</b></td><td><b>Parameters</b></td></tr>
                 <tr><td>move</td><td>left, right, up, down</td></tr>
-
             </table>
 
-                <br/> 
-                For example, type "move(right);" and click the "RUN" button to move your player one space to the right.
+            <br/> 
+
+            For example, type "move(right);" and click the "RUN" button to move your player one space to the right.
         </div>
     </div>
-    <div id="console" style="z-index:1; position:absolute; top: 78%; left: 3.4%">
+
+    <a href = "https://github.com/RaspberryGaming/raspberrygaming.github.com/archive/master.zip">
+        <div  id ="download">
+
+            Download Source Code      
+
+        </div>
+    </a>
+
+    <div id="console">
         Console
         <form id="console-area">
             <textarea id="console-box" cols="200" rows="8"></textarea>
             <a href="#"><div id="console-run" style="background:#629632; height:40px; width: 100px; color:white;text-align: center; vertical-align: middle; line-height: 40px;">
                 RUN
 
-               </div>
-            </a>
-        </form>
-    </div>
-    <div id="banner"> 
-        Raspberry Trails
+            </div>
+        </a>
+    </form>
+</div>
+<div id="banner"> 
+    Raspberry Trails
 
     <div/>
 </body>
